@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haiti: Rhythm, Color, Life</title>
+
+<style>
+
+/* ===== ROOT COLORS ===== */
+:root {
+  --blue: #0a3d62;
+  --red: #c8102e;
+  --yellow: #ffd166;
+  --cream: #f5f3ee;
+  --dark: #111;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background: url( "images/neg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 61, 98, 0.7),
+    rgba(200, 16, 46, 0.6)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h2 {
+  color: var(--yellow);
+  margin: 10px 0;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--yellow);
+  color: black;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section:nth-child(even) {
+  background: white;
+}
+
+h2 {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--yellow);
+  margin-top: 5px;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-top: 5px solid var(--red);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 15px;
+}
+
+/* ===== BEAUTY ===== */
+.beauty img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* ===== REFLECTION ===== */
+.reflection {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 80px 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* ===== ANIMATION ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Haiti: Rhythm, Color, Life</h1>
+    <h2>Culture. History. Power.</h2>
+    <p>A deeper look into Haiti’s identity beyond the surface.</p>
+    <a href="#history" class="btn">Explore Haiti</a>
+  </div>
+</header>
+
+<!-- HISTORY -->
+<section id="history" class="hidden">
+  <h2>History</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/revolution.jpg " alt="Haitian Revolution battle painting">
+      <p>Haiti became the first Black republic in 1804 through revolution and resistance.</p>
+    </div>
+    <div class="card">
+      <img src="images/anacaona.jpg" alt="Anacaona statue, Taino princess and leader">
+      <p>Leaders and cultural figures shaped a legacy rooted in strength and identity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE -->
+<section class="hidden">
+ <h2>Culture &amp; Art</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/taptap.jpg" alt="Colorful Haitian tap tap bus scene">
+      <p>Haitian art reflects bold color, identity, and storytelling.</p>
+    </div>
+    <div class="card">
+      <img src="images/fete.webp" alt="Haitian cultural festival dance">
+      <p>Festivals celebrate music, movement, and cultural pride.</p>
+    </div>
+    <div class="card">
+      <img src="images/marche.jpg" alt="Haiti Street market">
+      <p>Everyday life is filled with creativity, color, and rhythm.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEAUTY -->
+<section class="beauty hidden">
+  <h2>Natural Beauty</h2>
+  <img src="images/picolet.webp" alt="Haiti coastline and fort ruins">
+  <img src="images/basin.jpg" alt="Haitian waterfall landscape">
+  <p>From mountains to coastlines, Haiti’s landscapes reflect its richness and depth.</p>
+</section>
+
+<!-- REFLECTION -->
+<section class="reflection hidden">
+  <p>
+    Haiti is not one story.  
+    It is rhythm. It is color. It is life.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Created by Nyasha Starr | Digital Media Project</p>
+</footer>
+
+<!-- SCROLL ANIMATION -->
+<script>
+const elements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
